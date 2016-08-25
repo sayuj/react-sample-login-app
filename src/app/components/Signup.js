@@ -1,15 +1,17 @@
 import React from 'react';
+import { Router, browserHistory } from 'react-router';
 
-class Signup extends React.Component {
+export default class Signup extends React.Component {
   handleSubmit(){
-    alert("signed up");
+    // alert("signed up");
+    browserHistory.pushState(null, 'dashboard');
   }
 
   render(){
     return(
       <div id="signup">
         <h1>Signup</h1>
-        <form onClick={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}>
           <div>
             <label>Username:</label>
             <input type="text" ref="username" />
@@ -28,5 +30,3 @@ class Signup extends React.Component {
     );
   }
 };
-
-export default Signup;

@@ -1,7 +1,7 @@
 import React from 'react';
 import autoBind from 'react-autobind';
 
-class Dashboard extends React.Component{
+export default class Dashboard extends React.Component{
   constructor(props) {
     super(props);
     autoBind(this);
@@ -30,5 +30,3 @@ class Dashboard extends React.Component{
       )
   }
 };
-
-export default Dashboard;
